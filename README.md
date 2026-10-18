@@ -1,8 +1,8 @@
-# AgentFlow
+# agent-workflow-forge
 
 **让主 Agent 拆任务，让子 Agent 分工执行，让任务板记录整个协作过程。**
 
-AgentFlow 是一个 Python 多 Agent 任务编排示例，使用 **DeepSeek + Agently** 生成任务计划，通过 **ACP** 调用本地 **Codex** 子 Agent，并由 **TriggerFlow** 承载任务状态与进度事件。
+agent-workflow-forge 是一个 Python 多 Agent 任务编排示例，使用 **DeepSeek + Agently** 生成任务计划，通过 **ACP** 调用本地 **Codex** 子 Agent，并由 **TriggerFlow** 承载任务状态与进度事件。
 
 项目以“杭州三天两晚团建规划”为示例：输入业务需求，自动拆解带依赖关系的子任务，逐个回收结果，最终生成行程草案、信息缺口、风险提示和待确认问题。修改 `materials/product_goal.txt`，可以尝试其他以文字分析和方案规划为主的任务。
 
@@ -111,7 +111,7 @@ ACP 调用生命周期是：
 ## 代码结构
 
 ```text
-AgentFlow/
+agent-workflow-forge/
 ├── scripts/
 │   ├── 01_plan_board.py                 # 主 Agent 动态生成并校验任务板
 │   ├── 02_worker_acp_smoke.py           # 验证 ACP 连接和同会话多轮调用
@@ -139,8 +139,8 @@ AgentFlow/
 - 可用的 DeepSeek API Key；主 Agent 与 Codex worker 使用各自的认证和模型额度。
 
 ```bash
-git clone https://github.com/wywzixin/AgentFlow.git
-cd AgentFlow
+git clone https://github.com/wywzixin/agent-workflow-forge.git
+cd agent-workflow-forge
 python -m venv .venv
 ```
 
