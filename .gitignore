@@ -1,0 +1,35 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python environments, caches and build output
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+
+# Local run output
+.demo_runs/
+*.log
+
+# Original lesson documents and illustrations
+*.pdf
+*.ipynb
+.ipynb_checkpoints/
+/assets/
+/主Agent调度与多Agent协作.md
+
+# Editor and operating system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
